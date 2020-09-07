@@ -34,4 +34,15 @@ class SringjpajunitdemoApplicationTests {
         Assertions.assertTrue(byId.getFirstName().length() > 0);
     }
 
+    @Test
+    public void testUpdateFirstName(){
+        List<String> strings = customerService.addCustomer(Arrays.asList(new Customer(null, "pkp", "abc")));
+        Customer byId = customerRepo.findById(1);
+        log.info("Customer : {}", byId);
+        Integer status = customerRepo.updateFirstName(Long.valueOf(1), "pkp1");
+        byId = customerRepo.findById(1);
+        log.info("Status after update : {} ,  Value : {}", status, byId);
+        Assertions.assertTrue(byId.getFirstName().length() > 0);
+    }
+
 }
