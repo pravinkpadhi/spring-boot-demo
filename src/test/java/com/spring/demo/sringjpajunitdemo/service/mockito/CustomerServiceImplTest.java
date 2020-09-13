@@ -26,7 +26,8 @@ public class CustomerServiceImplTest extends JunitTestBase {
     private CustomerServiceImpl customerService;
 
     /*
-    This method run before and mocked method, Mostly initialization method
+    This method runs before any mocked method.
+    Mostly initialization like define a mock json or object and use in all test methods.
      */
     @BeforeEach
     public void initializeMockito(){
