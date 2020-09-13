@@ -1,5 +1,6 @@
-package com.spring.demo.sringjpajunitdemo;
+package com.spring.demo.sringjpajunitdemo.service.integration;
 
+import com.spring.demo.sringjpajunitdemo.base.JunitTestBase;
 import com.spring.demo.sringjpajunitdemo.model.Customer;
 import com.spring.demo.sringjpajunitdemo.repository.CustomerRepo;
 import com.spring.demo.sringjpajunitdemo.service.CustomerService;
@@ -7,14 +8,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
 import java.util.List;
 
-@SpringBootTest(classes = SringjpajunitdemoApplication.class)
 @Slf4j
-class SringjpajunitdemoApplicationTests {
+class CustomerServiceImplTest extends JunitTestBase {
 
     @Autowired
     private CustomerRepo customerRepo;
